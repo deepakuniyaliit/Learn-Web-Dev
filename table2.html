@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Table</title>
+    <style>
+        table, tr, th, td{
+            border: 1px dotted black;
+            border-collapse: collapse;
+        }
+
+        .blue{
+            color: blue;
+        }
+        #red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead class="blue">
+            <tr>
+                <th colspan="4">Student Information</th>
+            </tr>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Student Age</th>
+                <th>Student E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="red">
+                <td row>123</td>
+                <td>Sachin</td>
+                <td>20</td>
+                <td>sachin@gmail.com</td>
+            </tr>
+
+            <tr class="blue">
+                <td>456</td>
+                <td>Ishita</td>
+                <td>20</td>
+                <td>ishita@gmail.com</td>
+            </tr>
+
+            <tr id="red">
+                <td>567</td>
+                <td>Rahul</td>
+                <td>20</td>
+                <td>rahul@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
