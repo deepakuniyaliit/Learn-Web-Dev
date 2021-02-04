@@ -30,6 +30,9 @@ else{
         <option value="Dehradun">Dehradun</option>
         <option value="Delhi">Delhi</option>
         <option value="Jaipur">Jaipur</option>
+        <option value="Nanital">Nanital</option>
+        <option value="Mussoorie">Mussoorie</option>
+        <option value="Lucknow">Lucknow</option>
     </select><br>
     <input type="submit" name="submit" value="Click Here To Submit Your Data">
 </form>
