@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>JavaScript</title>
+    <style>
+        .para{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .p1{
+            color: blue;;
+        }
+        .p2{
+            color:rgb(255, 0, 43);
+        }
+        .p3{
+            color:#0606d1;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1 para">Welcome To The Course of Web!</p>
+    <p class="p2 para">Welcome To The Course of Web!</p>
+    <p class="p3 para">Welcome To The Course of Web!</p>
+    <button onclick="changeText()">Change</button>
+
+    <script>
+        function changeText(){
+            elements = document.getElementsByClassName('para');
+        for(i=0; i<elements.length; i++){elements[i].textContent = 'Welcome To JS Line Number '+i;}
+        }
+    </script>
+</body>
+</html>

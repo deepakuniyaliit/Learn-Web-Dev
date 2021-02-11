@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>JavaScript</title>
+    <style>
+        .p1{
+            color: blue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .p2{
+            color:rgb(255, 0, 43);
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1">Para1</p>
+    <p class="p2">Para2</p>
+    <button onclick="swapText()">Change</button>
+
+    <script>
+        function swapText(){
+            p1 = document.getElementsByClassName('p1')[0];
+            p2 = document.getElementsByClassName('p2')[0];
+            temp = p1.textContent;
+            p1.textContent = p2.textContent;
+            p2.textContent = temp;
+        }
+    </script>
+</body>
+</html>
