@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 include('config.php');
 ?>
 
@@ -9,10 +12,10 @@ if(isset($_POST['submit'])){
     $contact = $_POST['contact'];
     $city = $_POST['city'];
 
-    $sql = "INSERT INTO `users` (`username`, `email`, `contact`, `city`) VALUES ('$username', '$email', '$contact', '$city')";
+    $sql = "INSERT INTO `users` (`username`,`password`, `email`, `contact`, `city`) VALUES ('$username','456', '$email', '$contact', '$city')";
     mysqli_query($conn, $sql);
 }
-else{
+else if(isset($_SESSION['username']) ){
     echo "Please click submit button to submit the data..";
 }
 ?>
@@ -22,6 +25,11 @@ else{
         <title>HTML Forms</title>
     </head>
 <body>
+
+<?php
+if(isset($_SESSION['username'])){
+?>
+
 <form method="POST" action="add.php">
     USERNAME <input type="text" name="username" placeholder="Type Your Username" required><br>
     E-MAIL <input type="email" name="email" placeholder="Type Your E-mail" required><br>
@@ -36,5 +44,16 @@ else{
     </select><br>
     <input type="submit" name="submit" value="Click Here To Submit Your Data">
 </form>
+
+<?php
+}
+else{
+    echo "Login as a valid user";
+
+?>
+    <a href="login.php">Login</a>
+<?php
+}
+?>
 </body>
 </html>

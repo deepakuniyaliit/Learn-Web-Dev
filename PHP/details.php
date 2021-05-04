@@ -1,4 +1,9 @@
 <?php
+session_start();
+// echo $_SESSION['username'];
+?>
+
+<?php
 include('config.php');
 ?>
 
@@ -45,6 +50,7 @@ include('config.php');
         <title>User Details</title>
     </head>
 <body>
-
+<a href="add.php">Add Record</a>
+<a href="logout.php">Logout</a>
 </body>
 </html>
